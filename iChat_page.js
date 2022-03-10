@@ -12,9 +12,9 @@ firebase.initializeApp(firebaseConfig);
 Username = localStorage.getItem("username");
 roomName = localStorage.getItem("room_name");
 
-function send() {
+function Send() {
     msg = document.getElementById("msg").value;
-    firebase.database().ref(room_name).push({
+    firebase.database().ref(roomName).push({
           name: username,
           message: msg,
           like: 0
